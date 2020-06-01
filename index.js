@@ -4,14 +4,27 @@ const express = require('express')
 //create a server obj
 const server = express()
 
+server.use(express.json())// parses data into json
+
+
+let users = []
+
 
 server.get('/', (req, res) => { 
-    res.json({message: "hello from the server BOYYYY"})
+    res.json({message: "hello from the server!! "})
+})
+
+server.get('/api/users', (req, res) => {
+    
 })
 
 
-
-
+server.post('/api/users', (req, res) => {
+    const userInfo = req.body
+    console.log(userInfo)
+    users.push(userInfo)
+    res.status(201).json(userInfo);
+})
 
 
 //server is listening for requests 
