@@ -9,9 +9,9 @@ server.use(express.json())// parses data into json
 
 let users = [
     {
-        id: 2,
+        id: 1,
         name: "genard tejano",
-        bio: "another cool doode",
+        bio: "cool doode",
     }
 ]
 
@@ -22,6 +22,14 @@ server.get('/', (req, res) => {
 
 server.get('/api/users', (req, res) => {
     res.status(200).json(users)
+})
+
+server.delete('/api/users/:id', (req, res) => {
+    const id = req.params.id
+
+    users = users.filter( user => user.id !== Number(id))
+    res.status(200).json(users)
+
 })
 
 
