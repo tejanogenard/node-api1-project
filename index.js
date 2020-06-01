@@ -7,7 +7,13 @@ const server = express()
 server.use(express.json())// parses data into json
 
 
-let users = []
+let users = [
+    {
+        id: 2,
+        name: "genard tejano",
+        bio: "another cool doode",
+    }
+]
 
 
 server.get('/', (req, res) => { 
@@ -15,7 +21,7 @@ server.get('/', (req, res) => {
 })
 
 server.get('/api/users', (req, res) => {
-    
+    res.status(200).json(users)
 })
 
 
