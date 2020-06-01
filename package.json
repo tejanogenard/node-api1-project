@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tejanogenard/node-api1-project#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "gitignore": "^0.6.0"
   }
 }
