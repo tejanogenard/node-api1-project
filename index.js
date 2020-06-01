@@ -26,15 +26,9 @@ server.get('/api/users', (req, res) => {
 
 server.get('/api/users/:id', (req, res) => {
     const id = req.params.id
-    const find = users.find(user => user.id === id)
-  
-    if (find){
-        users = users.filter(user => user.id !== id)
-        res.status(200).json(find)
-    } else {
-        res.status(400).json({message: "user not found"})
-    }
- 
+    const find = users.find(user => user.id == id)
+
+        res.status(200).json(find) 
   })
   
 
