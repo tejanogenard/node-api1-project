@@ -90,7 +90,7 @@ When the client makes a `DELETE` request to `/api/users/:id`:
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ errorMessage: "The user could not be removed" }`.
 
-When the client makes a `PUT` request to `/api/users/:id`:
+<!-- When the client makes a `PUT` request to `/api/users/:id`:
 
 - If the _user_ with the specified `id` is not found:
 
@@ -111,7 +111,7 @@ When the client makes a `PUT` request to `/api/users/:id`:
 
   - update the user document in the database using the new information sent in the `request body`.
   - respond with HTTP status code `200` (OK).
-  - return the newly updated _user document_.
+  - return the newly updated _user document_. -->
 
 ## Stretch Problems
 
